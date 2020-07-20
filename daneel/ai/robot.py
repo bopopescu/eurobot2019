@@ -41,9 +41,9 @@ class Robot(object):
             self.behavior = FSMMatch(self)
         elif behavior == Behaviors.FSMTests.value:
             raise NotImplementedError("This behavior is not implemented yet !")
-        elif behavior == Behaviors.Slave.value:
-            from behavior.slave import Slave
-            self.behavior = Slave(self)
+        elif behavior == Behaviors.Subordinate.value:
+            from behavior.subordinate import Subordinate
+            self.behavior = Subordinate(self)
         else:
             raise NotImplementedError("This behavior is not implemented yet !")
 
